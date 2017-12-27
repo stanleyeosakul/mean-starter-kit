@@ -1,27 +1,61 @@
-# MeanStarterKit
+<p align="center">
+    <img width="400" height="185" src="./src/assets/pics/mean.png">
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
+# MEAN Starter Kit w/ Angular Universal
+This MEAN Starter Kit is a template for Angular 5 MEAN projects and is integrated with Angular Universal.  MEAN is a full-stack development toolkit using the Javascript-based technologies MongoDB, Express, Angular, and Node.js.  It uses JavaScript for client-side and server-side web application development.
 
-## Development server
+<p align="center">
+    <img width="768" height="310" src="./src/assets/pics/mean_cycle.jpg">
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Versions
+* MongoDB v3.6.0
+* Express v4.16.2
+* Angular v5.1.2
+* Node.js v9.3.0
 
-## Code scaffolding
+## Installation
+1. Clone this repo: `git clone https://github.com/Stanza987/mean-starter-kit.git`
+1. `cd` into the folder of the cloned repo
+1. Run `npm install` to install dependencies
+1. Start your local MongoDB instance
+1. Choose to run the development or production server
+    * Development
+        * Front End (Angular)
+            * Run `ng serve`, and navigate to `http://localhost:4200/`. 
+        * Back End (MongoDB, Express, Node.js)
+            * Run `npm run build` to generate the `dist/` and `dist-server/` folders in your root directory.
+            * Run `node server.js`, and navigate to `http://localhost:3000/`.
+    * Production
+        * Run `npm start`. Navigate to `http://localhost:3000/`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Built-in scripts
+* `npm run build`
+    * Builds the Angular project into the `dist/` folder
+    * Builds the Angular Universal server into the `dist-server` folder
+* `npm start`
+    * Runs `npm run build` as above
+    * Runs the `server.js` node app
 
-## Build
+## Installed Packages
+### Front-end
+* Angular 5
+* Angular Universal
+* [Bulma CSS Framework](https://bulma.io/)
+* [Font-Awesome 5](https://fontawesome.com/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### Back-end
+* Express
+* Mongoose
+* Body-Parser
+* Bluebird Promise library
+* Cors (disabled by default)
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Development and Testing
+* Angular CLI v1.6.2
+* Morgan Logging library
+* Typescript
+* Karma
+* Protractor
+* Jasmine
