@@ -33,7 +33,7 @@ This MEAN Starter Kit is a template for Angular 5 MEAN projects and is integrate
 ## Built-in scripts
 * `npm run build`
     * Builds the Angular project into the `dist/` folder
-    * Builds the Angular Universal server into the `dist-server` folder
+    * Builds the Angular Universal server into the `dist-server/` folder
 * `npm start`
     * Runs `npm run build` as above
     * Runs the `server.js` node app
