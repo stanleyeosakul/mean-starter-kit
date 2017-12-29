@@ -10,7 +10,7 @@ This MEAN Starter Kit is a template for Angular 5 MEAN projects and is integrate
 </p>
 
 ## Versions
-* MongoDB v3.6.0
+* MongoDB v3.6.0 (Mongoose v4.13.8)
 * Express v4.16.2
 * Angular v5.1.2
 * Node.js v9.3.0
@@ -25,12 +25,15 @@ This MEAN Starter Kit is a template for Angular 5 MEAN projects and is integrate
         * Front End (Angular)
             * Run `ng serve`, and navigate to `http://localhost:4200/`. 
         * Back End (MongoDB, Express, Node.js)
-            * Run `npm run build` to generate the `dist/` and `dist-server/` folders in your root directory.
-            * Run `node server.js`, and navigate to `http://localhost:3000/`.
+            * Run `npm run dev`, and navigate to `http://localhost:3000/`.
     * Production
-        * Run `npm start`. Navigate to `http://localhost:3000/`.
+        * Run `npm start`, and navigate to `http://localhost:3000/`.
 
 ## Built-in scripts
+* `npm run dev`
+    * Builds the Angular project into the `dist/` folder without build optimization
+    * Builds the Angular Universal server into the `dist-server/` folder without build optimization
+    * Runs the `server.js` node app
 * `npm run build`
     * Builds the Angular project into the `dist/` folder
     * Builds the Angular Universal server into the `dist-server/` folder
@@ -50,10 +53,9 @@ This MEAN Starter Kit is a template for Angular 5 MEAN projects and is integrate
 * Mongoose
 * Body-Parser
 * Bluebird Promise library
-* Cors (disabled by default)
 
 ### Development and Testing
-* Angular CLI v1.6.2
+* Angular CLI v1.6.3
 * Morgan Logging library
 * Typescript
 * Karma

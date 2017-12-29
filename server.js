@@ -11,7 +11,6 @@ const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const cors = require('cors');
 
 // Express and Port
 const app = express();
@@ -20,16 +19,16 @@ const port = process.env.PORT || 3000;
 // Server Bundle
 const appServer = require('./dist-server/main.bundle');
 
+// Routes
+const angular = require('./node_src/routes/angular');
+const api = require('./node_src/routes/api');
+
 // Connect to database via mongoose
-const config = require('./config/database');
+const config = require('./node_src/config/database');
 mongoose.Promise = require('bluebird');
 mongoose.connect(config.database, { useMongoClient: true, promiseLibrary: require('bluebird') })
     .then(() => console.log(`Connected to database ${config.database}`))
     .catch((err) => console.log(`Database error: ${err}`));
-
-// Routes
-const angular = require('./routes/angular');
-const api = require('./routes/api');
 
 // ******************************************
 // MIDDLEWARE
