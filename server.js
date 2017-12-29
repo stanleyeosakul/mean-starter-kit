@@ -45,7 +45,7 @@ app.use(bodyParser.json());
 // ******************************************
 // ROUTES
 // ******************************************
-// Server side-rendering of root route
+// Server-side rendering of root route
 app.get('/', angular.serverRouter);
 
 // API calls go here
