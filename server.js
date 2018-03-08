@@ -9,7 +9,6 @@ const express = require('express');
 const ngUniversal = require('@nguniversal/express-engine');
 const path = require('path');
 const morgan = require('morgan');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 // Express and Port
@@ -24,11 +23,7 @@ const angular = require('./node_src/routes/angular');
 const api = require('./node_src/routes/api');
 
 // Connect to database via mongoose
-const config = require('./node_src/config/database');
-mongoose.Promise = require('bluebird');
-mongoose.connect(config.database, { useMongoClient: true, promiseLibrary: require('bluebird') })
-    .then(() => console.log(`Connected to database ${config.database}`))
-    .catch((err) => console.log(`Database error: ${err}`));
+require('./node_src/config/db');
 
 // ******************************************
 // MIDDLEWARE
@@ -37,7 +32,8 @@ mongoose.connect(config.database, { useMongoClient: true, promiseLibrary: requir
 app.use(morgan('dev'));
 
 // Body-Parser
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // Cross-Origin Resource Sharing (CORS) - Uncomment to Enable
 // app.use(cors());
